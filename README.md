@@ -11,9 +11,9 @@ This repository is an archive containing all the projects I have completed durin
 <details>
 <summary>Click to expand Week 1 projects</summary>
 
-| #   | Project Name                            | Source Code    |
-| --- | --------------------------------------- |----------------|
-| 1   | ATM                                     | [Source](https://github.com/deerborg/React-Hub/blob/main/Prework_Practices/index.html) |
+| #   | Project Name | Source Code    |
+| --- |--------------|----------------|
+| 1   | Prework-1    | [Source](https://github.com/deerborg/React-Hub/blob/main/Prework_Practices/index.html) |
 
 
 </details>
