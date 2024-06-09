@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body {
+        padding: 20px;
+        background-color: darkolivegreen;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .card {
+        background-color: black;
+        margin-top: 10px;
+        padding: 5px;
+        width: 500px;
+        margin: auto;
+        text-align: center;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px white;
+    }
+</style>
+<body>
+<div class="card">
+    <h1>HTML Images</h1>
+
+    <h2>Example</h2>
+    <img src="../assets/gif.gif " width="200" height="200">
+
+    <h2>Attributes</h2>
+    <h3>The <code>alt</code> Attributes</h3>
+    <img src="../assets/gif.gif " width="200" height="200" alt="dis gucler">
+
+    <h3>The <code>width & height</code> "50x50" Attributes</h3>
+    <img src="../assets/gif.gif " width="50" height="50" alt="dis gucler">
+
+    <h3>The <code>srcset</code> Attributes</h3>
+    <img src="../assets/gif.gif" width="200" height="200" alt="dis gucler" srcset="../assets/gif.gif">
+
+    <h3>The <code>loading</code> Attributes</h3>
+    <img src="../assets/gif.gif" width="200" height="200" alt="dis gucler" srcset="../assets/gif.gif" loading="lazy">
+
+    <h3>The <code>picture</code> Attributes</h3>
+    <picture>
+        <source src="../assets/gif.gif" type="gif/gif">
+    </picture>
+
+</div>
+</body>
+</html>
