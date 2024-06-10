@@ -11,9 +11,10 @@ This repository is an archive containing all the projects I have completed durin
 <details>
 <summary>Click to expand Week 1 projects</summary>
 
-| #   | Project Name | Source Code    |
-| --- |--------------|----------------|
-| 1   | Prework-1    | [Source](https://github.com/deerborg/React-Hub/blob/main/Prework_Practices/index.html) |
+| # | Project Name   | Source Code    |
+|---|----------------|----------------|
+| 1 | Prework-1      | [Source](https://github.com/deerborg/React-Hub/blob/main/Prework_Practices/index.html) |
+| 2 | Student Tables | [Source](https://github.com/deerborg/React-Hub/blob/main/Tables/index.html) |
 
 
 </details>
@@ -22,3 +23,5 @@ This repository is an archive containing all the projects I have completed durin
 ## License
 
 This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+
