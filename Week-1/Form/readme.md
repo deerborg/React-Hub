@@ -15,6 +15,9 @@ This project is a simple registration form built using HTML and CSS. It includes
 - **CSS**: For styling the form.
 - **Google Fonts**: For custom fonts.
 
+## Images
+<img src="img.png">
+
 ## Usage
 
 To use this project, simply clone the repository and open the `index.html` file in your web browser.
