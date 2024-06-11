@@ -13,8 +13,9 @@ This repository is an archive containing all the projects I have completed durin
 
 | # | Project Name   | Source Code    |
 |---|----------------|----------------|
-| 1 | Prework-1      | [Source](https://github.com/deerborg/React-Hub/blob/main/Prework_Practices/index.html) |
-| 2 | Student Tables | [Source](https://github.com/deerborg/React-Hub/blob/main/Tables/index.html) |
+| 1 | Prework-1      | [Source](https://github.com/deerborg/React-Hub/tree/main/Week-1/Prework_Practices) |
+| 2 | Student Tables | [Source](https://github.com/deerborg/React-Hub/tree/main/Week-1/Tables) |
+| 3 | Form           | [Source](https://github.com/deerborg/React-Hub/tree/main/Week-1/Form) |
 
 
 </details>
