@@ -5,42 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: medium;
+    }
+    header{
+        background-color: rgba(0,25,255,0.51);
+        border-radius: 10px;
+        margin: 10px;
+
+    }
+    h1,h2,h3,h4,h5,h6{
+        padding: 10px;
+    }
+    p{
+        padding: 2px;
+    }
+    div{
+        border-radius: 5px;
+        padding: 5px;
+        margin: 15px;
+        background-color: #333333;
+        color: white;
+    }
+    div:hover{
+        background-color: white;
+        color: black;
+    }
+
+</style>
 <body>
-<h1>Lorem.</h1>
+<header>
+    <h1>HTML ATTRIBUTES</h1>
+    <h2>Global Attributes</h2>
+</header>
 
-<h2>Lorem, ipsum.</h2>
+<div>
+<h3>The <code>class</code> attribute</h3>
+<p class="foo bar">CSS and JS | check class attribute</p>
+</div>
+<div>
+    <h3>The <code>contendeditable</code> attribute</h3>
+    <p contenteditable="true">Click and Edit Text bcs true</p>
+    <p contenteditable="false">Dont't Edit Text bcs false</p>
+</div>
 
-<h3>The <code>class</code></h3>
-<p class="foo bar">CSS and JavaScript</p>
+<div>
+    <h3>The <code>data-*</code> attribute</h3>
+    <p data-name="deer" data-id="555">User Card (check attribute f12)</p>
+</div>
 
-<h3>The <code>content</code>.</h3>
-<p contenteditable="true">Editable textarea</p>
+<div>
+    <h3>The <code>dir</code> attribute</h3>
+    <p dir="rtl">The right side</p>
+    <p dir="ltr">The left side</p>
+</div>
 
-<h3>The <code>data-*</code>.</h3>
-<p data-name="Jhon" data-uuid="f88f8a8see-atnnngg882-fmmmggasşbbbb">user-context</p>
+<div>
+    <h3>The <code>id</code> attribute</h3>
+    <p id="username">username</p>
+</div>
 
-<h3>The <code>dir</code>.</h3>
-<p dir="rtl">Text right side</p>
-<p dir="ltf">Text left side</p>
+<div>
+    <h3>The <code>language</code> attribute</h3>
+    <p style="text-transform: uppercase" lang="en">insta (lang = "en")</p>
+    <p style="text-transform: uppercase" lang="tr">insta (lang = "tr")</p>
+</div>
 
-<h3>The <code>id</code>.</h3>
-<p id="uniq-id">ID text</p>
+<div>
+    <h3>The <code>title</code> attribute</h3>
+    <p title="first title">Check a title</p>
+</div>
 
-<h3>The <code>lang</code>.</h3>
-<p style="text-transform: uppercase">Paragraph - i -- for en</p>
-<p lang="tr" style="text-transform: uppercase">Paragraph - i -- for tr</p>
+<div>
+    <h3>The <code>translate</code> attribute</h3>
+    <p translate="yes">Translate (yes)</p>
+    <p translate="no">Translate (no)</p>
+</div>
 
-<h3>The <code>title</code>.</h3>
-<p title="fullstack dev. program">Patika.dev</p>
-
-<h3>The <code>translate</code>.</h3>
-<p translate="no">Apple</p>
-<p translate="yes">Apple</p>
-
-
-<h3>The <code>img</code>.</h3>
-<img src="../assets/gif.gif" alt="gif" width="200" height="200">
-<h3>The <code>video</code>.</h3>
-<video src="https://youtu.be/2e0THWS2-wM" controls autoplay muted width="300" height="300"></video>
+<div>
+    <h3>The <code>img</code> attribute</h3>
+    <img src="../assets/gif.gif" width="200" height="200" alt="disgucler">
+</div>
+<div>
+    <h3>The <code>video</code> attribute</h3>
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted autoplay loop></video>
+</div>
 </body>
 </html>

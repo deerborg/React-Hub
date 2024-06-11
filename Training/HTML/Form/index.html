@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            justify-content: center;
+        }
+        fieldset {
+            width: 300px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>User</legend>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" value="Enter username" disabled >
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="mail@mail.com">
+        </div>
+
+        <div>
+            <label for="birth">Birth Date</label>
+            <input type="date" id="birth">
+        </div>
+
+        <div>
+            <label for="city">City</label>
+            <select id="city">
+                <option>Select</option>
+                <optgroup label="North">
+                    <option value="samsun">Samsun</option>
+                    <option value="rize">Rize</option>
+                </optgroup>
+                <optgroup label="East">
+                    <option value="mardin">Mardin</option>
+                    <option value="d.bakir">Diyarbakir</option>
+                </optgroup>
+                <optgroup label="West">
+                    <option value="antalya">Antalya</option>
+                    <option value="mersin">Mersin</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label>Hobbies</label>
+            <div>
+                <input name="hobbies[]" value="A" type="checkbox">A
+                <input name="hobbies[]" value="B" type="checkbox">B
+            </div>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+
+        <div>
+            <label for="cv">CV</label>
+            <input type="file" id="cv">
+        </div>
+
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone">
+        </div>
+
+        <div>
+            <label for="address">address</label>
+            <textarea id="address" style="height: 100px; resize: none"></textarea>
+        </div>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+        <button type="button">NotWorking</button>
+
+        <input type="number">
+        <input type="url">
+        <input type="range" value="10">
+        <input type="search">
+    </fieldset>
+</form>
+</body>
+</html>

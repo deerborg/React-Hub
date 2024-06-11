@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+<header>
+  <div class="nav-bar"></div>
+  <nav>
+    <ul>
+      <li><a href="#">Main</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+    <div class="form">
+        <form>
+            <fieldset>
+                <legend>Register Card</legend>
+                <div class="register">
+                    <label for="username">Username</label>
+                    <input type="text" id="username">
+                </div>
+
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="email@mail.com">
+                </div>
+
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="gender">
+                    <label>Gender</label>
+                    <input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </div>
+
+                <div class="city">
+                    <label>City</label>
+                    <select>
+                        <option>Select City</option>
+                        <option>Istanbul</option>
+                        <option>Ankara</option>
+                        <option>Izmir</option>
+                    </select>
+                </div>
+
+                <div class="Address">
+                    <label for="address">Address</label>
+                    <textarea id="address" cols="20" rows="8" placeholder="Enter Address"></textarea>
+                </div>
+                <button type="submit" style="color: black">Register</button>
+                <button type="reset" style="color:black;">Clear</button>
+            </fieldset>
+        </form>
+    </div>
+</main>
+<footer>
+    <div class="footer">
+        <pre>deerborg | Furkan Aydemir ---> <a href="https://github.com/deerborg">GitHub</a></pre>
+    </div>
+</footer>
+</body>
+</html>
