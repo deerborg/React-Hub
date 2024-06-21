@@ -1,0 +1,23 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+.nav-bar{
+    background-color: red;
+    color: white;
+    display: flex;
+    border-radius: 10px;
+}
+.nav-bar,ul{
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+}
+ul,li{
+    display: flex;
+    margin: 10px;
+}
+li:hover{
+    background-color: #333333;
+    border-radius: 10px;
+}
