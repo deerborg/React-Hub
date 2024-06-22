@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #5a5a5a;
+    }
+
+    .nav-bar {
+        background-color: #69359c;
+        gap: 20px;
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: white;
+        font-size: 26px;
+        justify-content: space-between;
+        top: 20px;
+        left: 20px;
+        border: 5px solid orange;
+        border-radius: 10px;
+        position: sticky;
+    }
+
+    .nav-bar a {
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px;
+        color: black;
+    }
+
+    .nav-bar a:hover {
+        background-color: orange;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    .box{
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+    }
+    .blue{
+        z-index: 0;
+        background-color: navy;
+        color: white;
+        font-weight: bold;
+    }
+    .red{
+        z-index: 1;
+        margin: -50px 0 0 50px;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+    }
+    .yellow{
+        z-index: 2;
+        margin: -50px 0 0 100px;
+        background-color: yellow;
+        color: black;
+        font-weight: bold;
+    }
+    .pink{
+        z-index: 1;
+        margin: -50px 0 0 150px;
+        background-color: magenta;
+        color: white;
+        font-weight: bold;
+    }
+
+</style>
+<body>
+<div class="nav-bar">
+    <a href="#">Menu</a>
+    <a href="#">Menu</a>
+    <a href="#">Menu</a>
+</div>
+<div class="box blue">Z-Index: 0</div>
+<div class="box red">Z-Index: 1</div>
+<div class="box yellow">Z-Index: 2</div>
+<div class="box pink">Z-Index: 1</div>
+
+
+
+</body>
+</html>

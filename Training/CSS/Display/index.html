@@ -7,9 +7,322 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    .display{
+        background-color: dodgerblue;
+    }
+    .inline{
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        display: inline;
+    }
+    .inline-block{
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        display: inline-block;
+    }
+    .block{
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        display: block;
+    }
+    .none{
+        display: none;
+    }
+    .hidden{
+        visibility: hidden;
+    }
+    .flex{
+        background-color: #69359c;
+        gap: 10px;
+        padding: 10px;
+        display: flex;
+        max-width: 900px;
+    }
+
+    .grid{
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+        background-color: orange;
+    }
+    .grid div{
+        font-size: 32px;
+        text-align: center;
+        line-height: 75px;
+        background-color: white;
+    }
+
+    .grid div:hover{
+        background-color: purple;
+        color: white;
+    }
+
+    .flex div{
+        font-size: 32px;
+        text-align: center;
+        line-height: 75px;
+        width: 75px;
+        background-color: white;
+    }
+</style>
 <body>
 <div>
+<h1>CSS Display</h1>
+    <h2>display : inline</h2>
+    <p>The kingdom is full of density.Dry meatballs carefully, <span class="display inline">greatly with ground</span> then mix with cocktail sauce and serve equally in cooker.Damn yer swabbie, feed the shore.Soak each side of the butter with fifteen tablespoons of squid.All ancient monkeys understand each other, only magical egos have a chaos.</p>
+    <h2>display : inline-block</h2>
+    <p>The kingdom is full of density.Dry meatballs carefully, <span class="display inline-block">greatly with ground</span> then mix with cocktail sauce and serve equally in cooker.Damn yer swabbie, feed the shore.Soak each side of the butter with fifteen tablespoons of squid.All ancient monkeys understand each other, only magical egos have a chaos.</p>
+    <h2>display : block</h2>
+    <p>The kingdom is full of density.Dry meatballs carefully, <span class="display block">greatly with ground</span> then mix with cocktail sauce and serve equally in cooker.Damn yer swabbie, feed the shore.Soak each side of the butter with fifteen tablespoons of squid.All ancient monkeys understand each other, only magical egos have a chaos.</p>
+    <h2>display : none</h2>
+    <p>The kingdom is full of density.Dry meatballs carefully, <span class="display none">greatly with ground</span> then mix with cocktail sauce and serve equally in cooker.Damn yer swabbie, feed the shore.Soak each side of the butter with fifteen tablespoons of squid.All ancient monkeys understand each other, only magical egos have a chaos.</p>
+    <h2>visibility : none</h2>
+    <p>The kingdom is full of density.Dry meatballs carefully, <span class="display hidden">greatly with ground</span> then mix with cocktail sauce and serve equally in cooker.Damn yer swabbie, feed the shore.Soak each side of the butter with fifteen tablespoons of squid.All ancient monkeys understand each other, only magical egos have a chaos.</p>
 
+
+    <h2>display : flex</h2>
+    <h3>Container</h3>
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>The flex-direction column</h3>
+    <div class="flex" style="flex-direction: column; flex-wrap:wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>The flex-direction row | flex-wrap wrap</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap:wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+    </div>
+
+    <h3>The flex-direction row | flex-wrap no-wrap</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap:nowrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+    </div>
+
+    <h3>justify-content center</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap:wrap; justify-content: center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>justify-content space-betwen</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap:wrap; justify-content: space-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>justify-content space-around</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap:wrap; justify-content: space-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>justify-content space-evenly</h3>
+    <div class="flex" style="flex-direction: row; flex-wrap:wrap; justify-content: space-evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>align-items center</h3>
+    <div class="flex" style=" height: 200px; align-items: center; justify-content: center; flex-wrap: wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h3>align-content center</h3>
+    <div class="flex" style=" height: 200px; align-content: center; justify-content: center; flex-wrap: wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h3>Order</h3>
+    <div class="flex" style=" height: 200px; align-content: center; justify-content: center; flex-wrap: wrap">
+        <div style="order: 1">1</div>
+        <div style="order: 3">2</div>
+        <div style="order: 1">3</div>
+    </div>
+
+
+    <h3>flex-grow</h3>
+    <div class="flex" style=" height: 200px; align-content: center; justify-content: center; flex-wrap: wrap">
+        <div style="flex-grow: 5">1</div>
+        <div>2</div>
+        <div style="flex-grow: 1">3</div>
+        <div>4</div>
+        <div>8</div>
+    </div>
+
+
+    <h3>flex-shrink</h3>
+    <div class="flex" style="align-content: center; justify-content: center; flex-wrap: nowrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div style="flex-shrink: 0">12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+    </div>
+
+
+    <h3>flex-basis row</h3>
+    <div class="flex" style=" height: 200px; align-content: center; justify-content: center; flex-wrap: wrap">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px">3</div>
+    </div>
+
+    <h3>flex-basis column</h3>
+    <div class="flex" style=" align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: column">
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px">3</div>
+    </div>
+
+    <h3>align-self</h3>
+    <div class="flex" style="height: 200px">
+        <div>1</div>
+        <div>2</div>
+        <div style="align-self: center; justify-self: flex-end; flex-direction: row;">3</div>
+        <div>4</div>
+    </div>
+
+    <h2>display: grid</h2>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>grid-template-columns auto</h2>
+    <div class="grid" style="grid-template-columns: auto auto auto">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <h2>grid-template-columns 150px</h2>
+    <div class="grid" style="grid-template-columns: 150px 150px 150px 150px">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+
+    <h2>grid-columns 1 / 3</h2>
+    <div class="grid" style="grid-template-columns: auto auto auto">
+        <div style="grid-column: 1 / 3">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
 </div>
+
 </body>
 </html>
