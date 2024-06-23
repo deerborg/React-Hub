@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="title">Register Form</h1>
+
+<form class="survey-form">
+    <fieldset>
+
+        <input type="text" id="name-label" placeholder="Full Name">
+
+        <input type="email" id="email-label" placeholder="Email">
+
+        <input type="number" id="number-label" max="100" placeholder="Age">
+
+        <select id="gender">
+            <option>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <hr>
+
+        <div class="radio">
+            <label>Where did you hear about us?</label>
+            <label><input type="radio" name="name[]">Facebook</label>
+            <label><input type="radio" name="name[]">Linkedln</label>
+        </div>
+
+
+        <div class="check">
+            <label><input type="checkbox">Terms Of Service</label>
+            <label><input type="checkbox">Subscribe For New</label>
+        </div>
+
+
+
+        <textarea style="resize: none" placeholder="Text"></textarea>
+        <button type="submit">Register</button>
+    </fieldset>
+
+</form>
+</body>
+</html>
