@@ -21,6 +21,11 @@ The HTML file is structured as follows:
         - Checkboxes for "Terms Of Service" and "Subscribe For New".
         - Textarea for additional text input.
         - Submit button for form submission.
+## Image
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
 
 ```html
 <!doctype html>
