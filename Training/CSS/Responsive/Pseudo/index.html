@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        text-decoration: none;
+    }
+
+    .active:hover {
+        color: black;
+    }
+
+    .active:active {
+        color: red;
+    }
+
+    input[type="email"]:disabled {
+        background-color: #5a5a5a;
+    }
+
+    input[type="email"]::placeholder {
+        color: white;
+    }
+
+    input[type="email"]:hover::placeholder {
+        color: orange;
+        background-color: indigo;
+    }
+
+    h2:not(.c1) {
+        background-color: red;
+        color: white;
+    }
+    .c1{
+        color: white;
+        background-color: orange;
+    }
+    div p:nth-child(2n){
+        background-color: red;
+        color: white;
+    }
+    .c2:first-line{
+        color: red;
+    }
+    .c3{
+        color: black !important;
+        background-color: white !important;
+    }
+    .c4::before , .c4::after{
+        content: "Before - After";
+        background-color: red;
+        color: white;
+        padding: 10px;
+    }
+    .c4:hover:before , .c4:hover:after{
+        content: "Before - After";
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+    a::selection{
+        background-color: red;
+    }
+
+</style>
+<body>
+<h1>active::</h1>
+<p><a class="active" href="#">Click to page</a></p>
+<input type="email" disabled placeholder="mail@mail.com">
+
+<h2 class="c1">In Not</h2>
+<h2 class="c1">In Not</h2>
+<h2 class="c1">In Not</h2>
+<h2>Not Selector</h2>
+
+<div>
+    <p>Child 1</p>
+    <p>Child 2</p>
+    <p>Child 3</p>
+    <p>Child 4</p>
+    <p>Child 5</p>
+</div>
+
+<h2 class="c3">Pseudo Element</h2>
+<h3>first:line</h3>
+<p class="c2">Nuclear vexatum iacere crederes, tanquam salvus consilium.
+    Nuclear vexatum iacere crederes, tanquam salvus consilium.Nuclear vexatum iacere crederes, tanquam salvus consilium.Nuclear vexatum iacere crederes, tanquam salvus consilium.Nuclear vexatum iacere crederes, tanquam salvus consilium.Nuclear vexatum iacere crederes, tanquam salvus consilium.</p>
+
+
+<h2 class="c3">::before ::after</h2>
+<p class="c4"> Fail and you will be rejected earthly.</p>
+
+</body>
+</html>

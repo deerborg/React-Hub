@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        :root{
+            --primary-color: grey;
+            --display: flex;
+        }
+        .c1{
+            display: var(--display);
+            background-color: var(--primary-color);
+            height: 50px;
+            width: calc(50% + 50px);
+        }
+        .c2{
+            background-color: indigo;
+            height: 50px;
+            width: max(10%,200px);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<h2>calc(unit)</h2>
+<div class="c1"></div>
+<h2>max(value1,value2)</h2>
+<div class="c2"></div>
+</body>
+</html>
