@@ -20,10 +20,12 @@ p{
 }
 
 .section.white{
-    background-color: white;
+    background-color: #030039;
+    color: white;
 }
 
 .section-title{
+
     font-size: 45px;
     letter-spacing: 0.5px;
     text-align: center;
@@ -68,19 +70,21 @@ button.button{
 #header{
     position: relative;
     padding: 32px;
-    background-color: white;
+    background-color: #030039;
+    color: white;
 }
 #header .logo{
     display: block;
 }
 #nav{
+
     display: flex;
     gap: 0 32px;
     justify-content: end;
     align-items: center;
 }
 #nav .nav-item{
-    color: black;
+    color: white;
     padding: 2px;
 }
 #nav .nav-item:hover{
@@ -148,6 +152,7 @@ button.button{
     font-size: 18px;
     line-height: 1.6;
     margin: 0;
+    color: white;
 }
 
 /* Blog */
@@ -208,7 +213,11 @@ button.button{
 #footer{
     padding: 32px 0;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #030039;
+    color: white;
+}
+#footer a{
+    color: white;
 }
 
 #mobile-menu-button{

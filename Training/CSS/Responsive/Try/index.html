@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        * {
+            text-decoration: none;
+            color: white !important;
+        }
+
+        /* Pixel değeri 0 ile 759 arasında ise default olarak burası çalışır */
+
+        .c1 {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            background-color: indigo;
+            padding: 20px 20px;
+        }
+
+        .c1 a {
+            color: orange;
+            flex-basis: 10%;
+        }
+
+        .medium,.large,.xlarge,.xxlarge{
+            visibility: hidden;
+        }
+
+
+        /* Pixel boyutu 0 - 759 arasında değil ise. En az 760 pixsel ise bu @media geçerli olsun */
+        @media (min-width: 760px) {
+            .c1 {
+                background-color: #333333;
+                width: 760px;
+            }
+            .small{
+                visibility: hidden;
+            }
+            .medium{
+                visibility: visible;
+            }
+        }
+
+        /* Pixel boyutu 760 - 1023 arasında değil ise. En az 1024 pixsel ise bu @media geçerli olsun */
+        @media (min-width: 1024px) {
+            .c1 {
+                background-color: red;
+                width: 1024px;
+            }
+            .small,.medium{
+                visibility: hidden;
+            }
+            .large{
+                visibility: visible;
+            }
+        }
+        /* Pixel boyutu 1024 - 1439 arasında değil ise. En az 1440 pixsel ise bu @media geçerli olsun */
+        @media (min-width: 1440px) {
+            .c1 {
+                background-color: blue;
+                width: 1440px;
+            }
+            .small,.medium,.large{
+                visibility: hidden;
+            }
+            .xlarge{
+                visibility: visible;
+            }
+        }
+        /* Pixel boyutu 1440 - 1999 arasında değil ise. En az 2000 pixsel ise bu @media geçerli olsun */
+        @media (min-width: 2000px) {
+            .c1 {
+                background-color: grey;
+                width: 2000px;
+            }
+
+            .medium,.large,.xlarge,.small{
+                visibility: hidden;
+            }
+            .xxlarge{
+                visibility: visible;
+            }
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+<div class="c1">
+    <a href="#">Menu</a>
+    <a href="#">Menu</a>
+    <a href="#">Menu</a>
+    <a class="small" href="#">0-759 Pixel</a>
+    <a class="medium" href="#">760 Pixel</a>
+    <a class="large" href="#">1024 Pixel</a>
+    <a class="xlarge" href="#">1440 Pixel</a>
+    <a class="xxlarge" href="#">1440+ Pixel</a>
+</div>
+
+
+</body>
+</html>
