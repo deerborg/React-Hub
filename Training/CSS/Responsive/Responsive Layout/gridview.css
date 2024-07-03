@@ -86,7 +86,7 @@
     .container{
         width: 730px;
     }
-    .col-sö {
+    .col-sm {
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
