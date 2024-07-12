@@ -21,10 +21,10 @@ This repository is an archive containing all the projects I have completed durin
 
 </details>
 
-### Week 2
+### Week 3
 
 <details>
-<summary>Click to expand Week 2 projects</summary>
+<summary>Click to expand Week 3 projects</summary>
 
 | # | Project Name     | Source Code    |
 |---|------------------|----------------|
@@ -36,10 +36,10 @@ This repository is an archive containing all the projects I have completed durin
 </details>
 
 
-### Week 3
+### Week 4
 
 <details>
-<summary>Click to expand Week 3 projects</summary>
+<summary>Click to expand Week 4 projects</summary>
 
 | # | Project Name | Source Code    |
 |---|--------------|----------------|
@@ -50,15 +50,29 @@ This repository is an archive containing all the projects I have completed durin
 
 </details>
 
-### Week 4
+### Week 5
 
 <details>
-<summary>Click to expand Week 4 projects</summary>
+<summary>Click to expand Week 5 projects</summary>
 
 | # | Project Name | Source Code    |
 |---|--------------|----------------|
 | 1 | LandingPage  | [Source](https://github.com/deerborg/React-Hub/tree/main/Tailwind_Week-4/LandingPage) |
 | 2 | ReviewPage   | [Source](https://github.com/deerborg/React-Hub/tree/main/Tailwind_Week-4/ReviewPage) |
+
+
+</details>
+
+
+### Week 6
+
+<details>
+<summary>Click to expand Week 6 projects</summary>
+
+| # | Project Name | Source Code    |
+|---|--------------|----------------|
+| 1 | Clock        | [Source](https://github.com/deerborg/React-Hub/tree/main/Week-5-Javascript/Clock) |
+| 2 | DrumKit      | [Source](https://github.com/deerborg/React-Hub/tree/main/Week-5-Javascript/DrumKit) |
 
 
 </details>
