@@ -1,0 +1,108 @@
+# Welcome Clock Card Project
+
+This is a simple HTML project that displays a welcome message to the user and a clock with the current date and time. The welcome message is personalized based on the user's input.
+
+## Features
+
+- Prompts the user to enter their name and displays a personalized welcome message.
+- Displays the current date and time, updating every second.
+- Simple and clean design with CSS for styling.
+
+## File Structure
+
+- `index.html`: The main HTML file containing the structure and JavaScript for the project.
+- `styles.css`: The CSS file containing the styles for the project.
+
+## Code Explanation
+
+### HTML
+
+The HTML file contains two main `div` elements with IDs `card` and `clock`. The `card` displays the welcome message, and the `clock` displays the current date and time.
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #333333;
+    }
+
+    .card {
+        border-radius: 20px;
+        box-shadow: 3px 5px 2px white;
+        background-color: indigo;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        margin: 50px;
+    }
+
+    .clock {
+        border-radius: 20px;
+        box-shadow: 3px 5px 2px white;
+        background-color: indigo;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        margin: 50px;
+    }
+
+    .clockdp {
+        display: none;
+    }
+
+    .carddp {
+        display: none;
+    }
+</style>
+<body>
+<div id="card" class="clockdp">
+</div>
+
+<div id="clock" class="carddp">
+    <h3>Welcome</h3>
+</div>
+
+<script>
+    var name = prompt("Enter Name");
+
+    var card = document.getElementById("card")
+    var clock = document.getElementById("clock")
+
+    card.setAttribute("class", "card")
+    card.innerText = "Welcome " + name
+
+    function updateTime() {
+        var date = new Date();
+        var day = date.toLocaleDateString();
+        var time = date.toLocaleTimeString();
+
+        clock.setAttribute("class", "clock");
+        clock.innerText = "Date " + day + " " + time;
+    }
+
+    setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
+````
+
+## CSS
+The styles are defined within the HTML file using the `<style>` tag. The CSS styles the `body`, `card`, and `clock` elements, giving them a dark background, rounded corners, shadow effects, and centered text.
+
+## JavaScript
+The JavaScript code is responsible for:
+
+- Prompting the user to enter their name.
+- Displaying the personalized welcome message in the `card` element.
+- Updating the `clock` element every second with the current date and time.
+
+

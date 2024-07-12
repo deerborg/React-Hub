@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="h1">Count</h1>
+<input type="text" id="input" placeholder="input">
+
+<button id="btn" type="button">Count</button>
+<button id = "res" type="reset" onclick="handleOnClick()">Reset</button>
+
+<script>
+    var body = document.body;
+    var html = document;
+    var button = document.getElementById("btn")
+    var reset = document.getElementById("res")
+    var input = document.getElementById("input")
+
+    function handleKeyUp(event) {
+        document.getElementById("h1").innerText = event.key + " clicked";
+    }
+
+    function handleKeyDown(event) {
+        console.log(event.key)
+    }
+
+    function handleMouse(event) {
+        console.log(event)
+    }
+    var count = 1;
+    function btnClicked() {
+        document.getElementById("h1").innerText = count;
+        count++;
+    }
+
+    function handleOnClick(){
+        body.removeEventListener("keyup", handleKeyUp);
+
+        body.removeEventListener("keydown", handleKeyDown);
+
+        html.removeEventListener("click", handleMouse)
+
+        button.removeEventListener("click", btnClicked)
+
+        input.removeEventListener("input",inputEvent)
+    }
+
+    function inputEvent(event){
+        console.log(event)
+    }
+
+
+
+    body.addEventListener("keyup", handleKeyUp);
+
+    body.addEventListener("keydown", handleKeyDown);
+
+    html.addEventListener("click", handleMouse)
+
+    button.addEventListener("click", btnClicked)
+
+    input.addEventListener("input",inputEvent)
+
+
+
+
+
+</script>
+</body>
+</html>

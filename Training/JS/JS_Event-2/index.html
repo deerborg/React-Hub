@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div{
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        #d1{
+            background-color: indigo;
+        }
+        #d2{
+            background-color: #7405c5;
+        }
+
+        #d3{
+            background-color: #a131f3;
+        }
+
+        #d1:hover{
+            background-color: #031142;
+        }
+
+        #d2:hover{
+            background-color: #0002cc;
+        }
+
+        #d3:hover{
+            background-color: #183fff;
+        }
+
+
+
+        #d4{
+            background-color: #031142;
+        }
+        #d5{
+            background-color: #0002cc;
+        }
+
+        #d6{
+            background-color: #183fff;
+        }
+
+        #d4:hover{
+            background-color: indigo;
+        }
+
+        #d5:hover{
+            background-color: #7405c5;
+        }
+
+        #d6:hover{
+            background-color: #a131f3;
+        }
+    </style>
+</head>
+<body>
+
+<h4 style="background-color: #333333; color: whitesmoke; padding: 15px; text-align: center">Bubbling</h4>
+
+<div id="d1">
+    <div id="d2">
+        <div id="d3"></div>
+    </div>
+</div>
+
+<div style="background-color: red; padding: 1px; margin-top: 15px"></div>
+
+<h4 style="background-color: #333333; color: whitesmoke; padding: 15px; text-align: center">Capture</h4>
+<div id="d4">
+    <div id="d5">
+        <div id="d6"></div>
+    </div>
+</div>
+
+<script>
+
+    var d1 = document.getElementById("d1");
+    var d2 = document.getElementById("d2");
+    var d3 = document.getElementById("d3");
+
+
+    d1.addEventListener("click",(event) => {
+        console.log(event + " d1")
+    })
+
+    d2.addEventListener("click",(event) => {
+        console.log(event + " d2")
+        event.stopPropagation();
+    })
+
+    d3.addEventListener("click",(event) => {
+        console.log(event + " d3")
+        event.stopImmediatePropagation();
+    })
+
+    var d4 = document.getElementById("d4");
+    var d5 = document.getElementById("d5");
+    var d6 = document.getElementById("d6");
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
