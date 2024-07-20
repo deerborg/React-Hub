@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: orange;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: indigo;
+            color: white;
+            padding: 20px;
+            margin-top: 4%;
+            border-radius: 10px;
+        }
+
+        .input {
+            border-radius: 4px;
+            background-color: #333333;
+            color: white;
+        }
+
+        .btn {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 50px;
+            box-shadow: 1px 1px 1px 1px white;
+        }
+
+        .btn:hover {
+            border: 1px solid white;
+            box-shadow: none;
+        }
+
+        .values {
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            gap: 50px;
+            text-align: center;
+            background-color: white;
+            color: indigo;
+            padding: 2px;
+        }
+
+        .btn2 {
+            margin-left: 5px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 50px;
+            box-shadow: 1px 1px 1px 1px white;
+        }
+
+        .btn2:hover {
+            border: 1px solid white;
+            box-shadow: none;
+        }
+
+        .todos {
+            margin: 10px;
+            background-color: white;
+            display: flex;
+            gap: 30px;
+            border-radius: 10px;
+            width: 50%;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="card">
+    <h3>To Do</h3>
+    <input id="input" class="input" type="text">
+    <button class="btn" onclick="setItem()">+</button>
+</div>
+
+
+<script>
+
+    const input = document.getElementById("input")
+    const body = document.body;
+
+    function setItem() {
+
+        if (input.value !== "") {
+            localStorage.setItem("todo", input.value);
+            const createElement = document.createElement("div");
+            createElement.classList.add("todos");
+            createElement.innerHTML = `
+        <button class="btn2" onclick="remove(this)" type="button">-</button>
+        <h2>${input.value}</h2>
+        `;
+            body.appendChild(createElement);
+            input.value = "";
+
+        }
+    }
+
+    function remove(button) {
+        const todoItem = button.parentElement;
+        todoItem.remove();
+    }
+
+</script>
+
+</body>
+</html>

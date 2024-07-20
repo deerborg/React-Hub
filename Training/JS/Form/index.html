@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form id="signIn">
+
+    <input id="username" type="text" name="username" placeholder="Username" >
+    <input id="password" type="password" name="password" placeholder="Password" >
+    <button type="submit">Sign in</button>
+    <button id="show" type="button">Show Password</button>
+
+</form>
+
+
+<script>
+
+    const emptyValue = "";
+
+    const form = document.getElementById("signIn");
+
+    const showPassword = document.getElementById("show");
+    const password = document.getElementById("password");
+
+    let count = 1;
+
+    function show() {
+        count++;
+        if (count % 2 === 0) {
+            password.type = "text";
+        } else {
+            password.type = "password";
+        }
+    }
+
+    showPassword.addEventListener("click", show);
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+
+        const username = data.get("username");
+        const password = data.get("password");
+        if (username === emptyValue
+            || password === emptyValue
+            || username.arguments === undefined
+            || password.arguments === undefined
+        ) {
+            alert("Not null password or username")
+
+        } else {
+            fetch("https://jsonplaceholder.typicode.com/users").then(function (response) {
+                return response.json();
+            })
+        }
+    })
+
+</script>
+</body>
+</html>
