@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .nav {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .nav-item {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .in-content {
+            background-color: indigo;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="title">
+    <h1>Food's</h1>
+</div>
+
+
+<div class="nav">
+    <div id="all" class="nav-item">
+        <h2>All</h2>
+    </div>
+    <div id="f1" class="nav-item">
+        <h2>Food-1</h2>
+    </div>
+    <div id="f2" class="nav-item">
+        <h2>Food-2</h2>
+    </div>
+    <div id="f3" class="nav-item">
+        <h2>Food-3</h2>
+    </div>
+</div>
+
+<div id="content" class="content">
+
+
+</div>
+
+
+<script>
+
+    const all = document.getElementById("all");
+    const f1 = document.getElementById("f1");
+    const f2 = document.getElementById("f2");
+    const f3 = document.getElementById("f3");
+    const content = document.getElementById("content");
+
+
+    const foods = [
+        {
+            id: 1,
+            title: "Food - 1",
+            description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
+            category: "f1"
+        },
+
+        {
+            id: 2,
+            title: "Food - 1",
+            description: "1Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
+            category: "f1"
+        },
+
+        {
+            id: 3,
+            title: "Food - 2",
+            description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
+            category: "f2"
+        },
+
+        {
+            id: 4,
+            title: "Food - 2",
+            description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
+            category: "f2"
+        },
+
+        {
+            id: 5,
+            title: "Food - 3",
+            description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
+            category: "f3"
+        },
+
+        {
+            id: 6,
+            title: "Food - 3",
+            description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
+            category: "f3"
+        }
+    ]
+
+
+    function defaultPage(){
+        const item = [];
+
+        for (let i = 0; i < foods.length; i++) {
+            const innerHtml = `
+        <div class="in-content">
+        <h3>${foods[i].title}</h3>
+        <p>${foods[i].description}</p>
+    </div>
+    `;
+            item.push(innerHtml);
+        }
+
+        content.innerHTML = item;
+    }
+
+    defaultPage();
+
+
+    function food1() {
+
+        const item = [];
+
+        for (let i = 0; i < foods.length; i++) {
+            if (foods[i].category === "f1") {
+                const innerHtml = `
+        <div class="in-content">
+        <h3>${foods[i].title}</h3>
+        <p>${foods[i].description}</p>
+    </div>
+    `;
+                item.push(innerHtml);
+            }
+        }
+
+        content.innerHTML = item;
+
+    }
+
+    function food2() {
+        const item = [];
+
+        for (let i = 0; i < foods.length; i++) {
+            if (foods[i].category === "f2") {
+                const innerHtml = `
+        <div class="in-content">
+        <h3>${foods[i].title}</h3>
+        <p>${foods[i].description}</p>
+    </div>
+    `;
+                item.push(innerHtml);
+            }
+        }
+
+        content.innerHTML = item;
+    }
+
+    function food3() {
+        const item = [];
+
+        for (let i = 0; i < foods.length; i++) {
+            if (foods[i].category === "f3") {
+                const innerHtml = `
+        <div class="in-content">
+        <h3>${foods[i].title}</h3>
+        <p>${foods[i].description}</p>
+    </div>
+    `;
+                item.push(innerHtml);
+            }
+        }
+
+        content.innerHTML = item;
+    }
+
+    function allFood(){
+        const item = [];
+
+        for (let i = 0; i < foods.length; i++) {
+                const innerHtml = `
+        <div class="in-content">
+        <h3>${foods[i].title}</h3>
+        <p>${foods[i].description}</p>
+    </div>
+    `;
+                item.push(innerHtml);
+        }
+
+        content.innerHTML = item;
+    }
+
+    all.addEventListener("click",allFood)
+    f1.addEventListener("click", food1)
+    f2.addEventListener("click", food2)
+    f3.addEventListener("click", food3)
+
+
+</script>
+</body>
+</html>
