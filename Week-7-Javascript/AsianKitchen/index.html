@@ -3,55 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum=scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Food's</title>
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
 
         .nav {
             display: flex;
-            margin-top: 20px;
             justify-content: center;
-            gap: 60px;
+            margin: 20px 0;
+            gap: 20px;
         }
 
         .nav-item {
-            padding: 10px;
-            border: 1px solid black;
+            padding: 15px 25px;
+            border: 1px solid #343a40;
             border-radius: 5px;
             text-align: center;
             width: 100px;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
         }
 
         .nav-item:hover {
-            background-color: black;
+            background-color: #343a40;
             color: white;
+            transform: scale(1.1);
         }
 
         .title {
             display: flex;
             justify-content: center;
+            margin-top: 20px;
+        }
+
+        .title h1 {
+            font-size: 3rem;
+            color: #343a40;
         }
 
         .content {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: space-evenly;
-            flex-wrap: nowrap;
-            gap: 50px;
-            margin-top: 40px;
+            gap: 20px;
+            padding: 20px;
         }
 
         .in-content {
-            background-color: indigo;
+            background-color: #6610f2;
             color: white;
-            padding: 10px;
+            padding: 20px;
             border-radius: 10px;
-            font-size: 10px;
+            font-size: 1rem;
             text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .in-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .in-content p {
+            font-size: 0.875rem;
+        }
     </style>
 </head>
 
@@ -59,7 +82,6 @@
 <div class="title">
     <h1>Food's</h1>
 </div>
-
 
 <div class="nav">
     <div id="all" class="nav-item">
@@ -76,20 +98,14 @@
     </div>
 </div>
 
-<div id="content" class="content">
-
-
-</div>
-
+<div id="content" class="content"></div>
 
 <script>
-
     const all = document.getElementById("all");
     const f1 = document.getElementById("f1");
     const f2 = document.getElementById("f2");
     const f3 = document.getElementById("f3");
     const content = document.getElementById("content");
-
 
     const foods = [
         {
@@ -98,141 +114,55 @@
             description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
             category: "f1"
         },
-
         {
             id: 2,
             title: "Food - 1",
             description: "1Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
             category: "f1"
         },
-
         {
             id: 3,
             title: "Food - 2",
             description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
             category: "f2"
         },
-
         {
             id: 4,
             title: "Food - 2",
             description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
             category: "f2"
         },
-
         {
             id: 5,
             title: "Food - 3",
             description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
             category: "f3"
         },
-
         {
             id: 6,
             title: "Food - 3",
             description: "Age by mashing up with gravy.When the yogi of solitude understands the attractions of the master, the happiness will know body.O, dead hunger!",
             category: "f3"
         }
-    ]
+    ];
 
-
-    function defaultPage(){
-        const item = [];
-
-        for (let i = 0; i < foods.length; i++) {
-            const innerHtml = `
-        <div class="in-content">
-        <h3>${foods[i].title}</h3>
-        <p>${foods[i].description}</p>
-    </div>
-    `;
-            item.push(innerHtml);
-        }
-
-        content.innerHTML = item;
+    function renderFoods(category = "all") {
+        const items = foods.filter(food => category === "all" || food.category === category)
+            .map(food => `
+                <div class="in-content">
+                    <h3>${food.title}</h3>
+                    <p>${food.description}</p>
+                </div>
+            `).join('');
+        content.innerHTML = items;
     }
 
-    defaultPage();
+    all.addEventListener("click", () => renderFoods("all"));
+    f1.addEventListener("click", () => renderFoods("f1"));
+    f2.addEventListener("click", () => renderFoods("f2"));
+    f3.addEventListener("click", () => renderFoods("f3"));
 
-
-    function food1() {
-
-        const item = [];
-
-        for (let i = 0; i < foods.length; i++) {
-            if (foods[i].category === "f1") {
-                const innerHtml = `
-        <div class="in-content">
-        <h3>${foods[i].title}</h3>
-        <p>${foods[i].description}</p>
-    </div>
-    `;
-                item.push(innerHtml);
-            }
-        }
-
-        content.innerHTML = item;
-
-    }
-
-    function food2() {
-        const item = [];
-
-        for (let i = 0; i < foods.length; i++) {
-            if (foods[i].category === "f2") {
-                const innerHtml = `
-        <div class="in-content">
-        <h3>${foods[i].title}</h3>
-        <p>${foods[i].description}</p>
-    </div>
-    `;
-                item.push(innerHtml);
-            }
-        }
-
-        content.innerHTML = item;
-    }
-
-    function food3() {
-        const item = [];
-
-        for (let i = 0; i < foods.length; i++) {
-            if (foods[i].category === "f3") {
-                const innerHtml = `
-        <div class="in-content">
-        <h3>${foods[i].title}</h3>
-        <p>${foods[i].description}</p>
-    </div>
-    `;
-                item.push(innerHtml);
-            }
-        }
-
-        content.innerHTML = item;
-    }
-
-    function allFood(){
-        const item = [];
-
-        for (let i = 0; i < foods.length; i++) {
-                const innerHtml = `
-        <div class="in-content">
-        <h3>${foods[i].title}</h3>
-        <p>${foods[i].description}</p>
-    </div>
-    `;
-                item.push(innerHtml);
-        }
-
-        content.innerHTML = item;
-    }
-
-    all.addEventListener("click",allFood)
-    f1.addEventListener("click", food1)
-    f2.addEventListener("click", food2)
-    f3.addEventListener("click", food3)
-
-
+    renderFoods("all");
 </script>
 </body>
 </html>
