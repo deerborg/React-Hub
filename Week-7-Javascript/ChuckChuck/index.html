@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+
+        .card {
+            margin-top: 50%;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .content {
+            color: white;
+            margin: 5px;
+            border-radius: 6px;
+            padding: 10px;
+            background-color: #5a5a5a;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+
+        button {
+            width: 100px;
+            margin: 0 auto;
+            background-color: #a502a9;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: indigo;
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+<div class="card">
+    <div id="meem" class="content">
+        <button type="button">Click me</button>
+    </div>
+
+</div>
+
+
+<script>
+    const meem = document.getElementById("meem");
+
+    function laughMe() {
+
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then((response) => {
+                return response.json();
+            }).then((data) => {
+            let joke = data.value;
+            meem.innerHTML = `
+        <p>${joke}</p>
+        <button type="button">Meem me</button>
+        `
+        })
+    }
+    meem.addEventListener("click", laughMe);
+</script>
+
+</body>
+</html>
