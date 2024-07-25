@@ -20,6 +20,8 @@
             align-items: center;
             padding: 15px;
             border-radius: 8px;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .content {
@@ -46,6 +48,11 @@
         button:hover{
             background-color: indigo;
         }
+        .btncard{
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 1px 1px 1px 1px black;
+        }
 
 
     </style>
@@ -55,7 +62,10 @@
 
 <div class="card">
     <div id="meem" class="content">
-        <button type="button">Click me</button>
+
+    </div>
+    <div class="btncard">
+        <button id="btn" type="button">Click me</button>
     </div>
 
 </div>
@@ -63,9 +73,10 @@
 
 <script>
     const meem = document.getElementById("meem");
+    const btn = document.getElementById("btn")
 
-    function laughMe() {
-
+    function laughMe(event) {
+        console.log(event)
         fetch("https://api.chucknorris.io/jokes/random")
             .then((response) => {
                 return response.json();
@@ -73,11 +84,10 @@
             let joke = data.value;
             meem.innerHTML = `
         <p>${joke}</p>
-        <button type="button">Meem me</button>
         `
         })
     }
-    meem.addEventListener("click", laughMe);
+    btn.addEventListener("click", laughMe);
 </script>
 
 </body>
