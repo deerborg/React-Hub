@@ -1,0 +1,27 @@
+.stats{
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    flex-wrap: wrap;
+
+}
+
+.st-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    background-color: white;
+    padding:2rem 4rem;
+    flex-wrap: wrap;
+}
+
+.st-element h2{
+    margin: 0;
+}
+
+
+.st-element h2:first-child{
+    color: blue;
+}

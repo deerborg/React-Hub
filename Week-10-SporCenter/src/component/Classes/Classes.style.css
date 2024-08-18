@@ -1,0 +1,20 @@
+.classes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.classes-btn a{
+    color: white;
+    padding: 1rem;
+    background-color: blue;
+    border-radius: 0.2rem;
+}
+
+.classes-btn a:hover{
+    background-color: aqua;
+}

@@ -1,0 +1,31 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.logo h1::first-letter{
+    color: rgb(66, 35, 153);
+}
+
+.nav-element{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nav-element a{
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: black;
+}
+
+.nav-element a:hover{
+    background-color: orange;
+}

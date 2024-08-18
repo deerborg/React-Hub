@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    color: white;
+    gap: 0;
+}
+.head-title{
+    background-color: blue;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 0.3rem;
+    text-shadow: 0 0 10px black;
+    font-size: 0.6rem;
+}
+
+.second-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+.third-title{
+    background-color: white;
+    color: black;
+}
+.head-btn{
+    display: flex;
+}
+
+.head-btn h2{
+    background-color: blue;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}

@@ -1,0 +1,8 @@
+@import "./component/Nav/Nav.style.css";
+@import "./component/Header/Header.style.css";
+@import "./component/Stats/Stats.style.css";
+@import "./component/Classes/Classes.style.css";
+
+*{
+    margin:1rem;;padding: 0;text-decoration: none;list-style: none;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;
+}
