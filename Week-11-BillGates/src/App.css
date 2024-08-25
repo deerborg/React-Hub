@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  border-radius: 0.3rem;
+}
+body {
+  color: white;
+  background-color: rgb(214, 214, 214);
+}
+
+.total-money {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  color: black;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.items {
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.product {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.cost {
+  font-size: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sell {
+  background-color: rgb(185, 185, 185);
+  border: none;
+  padding: 0.5rem;
+  color: black;
+  cursor: pointer;
+}
+
+.buy {
+  background-color: green;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 3rem;
+  text-align: center;
+}
+
+.sell:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.buy:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
