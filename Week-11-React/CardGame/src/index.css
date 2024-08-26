@@ -1,0 +1,52 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 220;
+  --accent: var(--hue) 50% 50%;
+  --bkg: var(--hue) 40% 98%;
+  --txt: var(--hue) 70% 12%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 3rem;
+  background-color: hsl(var(--bkg));
+  padding: 2rem;
+  color: hsl(var(--txt));
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: .5rem 1.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  box-shadow: 0 0 2rem hsl(var(--accent) / .4),
+              0 0 0 -.4rem hsl(var(--bkg)),
+              0 0 0 -.8rem hsl(var(--accent));
+  transition: box-shadow 200ms ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:is(:hover, :focus-visible) {
+  box-shadow: 0 0 0 hsl(var(--accent) / .2),
+              0 0 0 .3rem hsl(var(--bkg)),
+              0 0 0 .6rem hsl(var(--accent));
+}

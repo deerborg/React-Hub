@@ -1,0 +1,16 @@
+.App {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: hsl(var(--accent)/.1);
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 4px solid hsl(var(--accent));
+  box-shadow: 0 2px 2rem hsl(var(--accent)/.3);
+  gap: 1rem;
+}

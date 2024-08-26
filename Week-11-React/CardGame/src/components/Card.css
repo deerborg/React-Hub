@@ -1,0 +1,38 @@
+.card {
+  display: grid;
+  position: relative;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: hsl(var(--bkg));
+  user-select: none;
+  border: 2px solid hsl(var(--accent));
+  box-shadow: 0 0 0 hsl(var(--accent) / .2),
+              0 0 0 -.3rem hsl(var(--bkg)),
+              0 0 0 -.6rem hsl(var(--accent));
+  transition: transform 600ms ease;
+}
+
+[disabled], .card.matched {
+  opacity: .2;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.side {
+  pointer-events: none;
+  position: absolute;
+}
+
+:is(.card.matched, .card.flipped, :focus) .back {
+  transform: rotateY(0deg);
+}
+
+:is(.card.matched, .card.flipped, :focus) .front {
+  transform: rotateY(90deg);
+}
+
+.back {
+  transform: rotateY(90deg);
+  font-size: 3rem;
+}
