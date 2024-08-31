@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  background: linear-gradient(to right, black, rgb(9, 0, 48));
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+  gap: 30px;
+}
+.save {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.title input {
+  width: fit-content;
+  height: 2rem;
+  color: black;
+  border-radius: 0.2rem;
+}
+
+.area textarea {
+  background-color: white;
+  width: fit-content;
+  height: 2rem;
+  color: black;
+  border-radius: 0.2rem;
+}
+
+.btn-save {
+  display: flex;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.btn-save:hover {
+  background-color: white;
+  color: green;
+}
+
+.get {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: fit-content;
+}
+.get-time {
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.btn-delete {
+  display: flex;
+  background-color: rgb(128, 0, 0);
+  color: white;
+  font-weight: bold;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background-color: white;
+  color: rgb(128, 0, 0);
+}
